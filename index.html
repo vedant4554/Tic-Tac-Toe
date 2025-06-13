@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic-Tac-Toe with Timer & Leaderboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>Tic-Tac-Toe</h1>
+
+    <div class="toggles">
+      <label><input type="checkbox" id="aiToggle" /> Play vs AI 🤖</label>
+      <label><input type="checkbox" id="darkToggle" /> Dark Mode 🌙</label>
+      <label>
+        Difficulty:
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="status">Player X's Turn ❌</div>
+    <div id="timer">Time: 0s</div>
+
+    <div class="scores">
+      <span>X: <span id="scoreX">0</span></span>
+      <span>O: <span id="scoreO">0</span></span>
+      <span>Draws: <span id="scoreDraw">0</span></span>
+    </div>
+
+    <div class="leaderboard">
+      <h3>Leaderboard</h3>
+      <ul id="leaderboardList"></ul>
+    </div>
+
+    <div id="board" class="board"></div>
+    <button onclick="restartGame()">🔄 Restart</button>
+  </div>
+
+  <audio id="clickSound" src="click.mp3"></audio>
+  <audio id="winSound" src="win.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
